@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revisão de Véspera — ANSA 2026 · Ênfase 13</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --bg2: #ffffff;
+    --bg3: #f1f3f5;
+    --text: #1a1a2e;
+    --text2: #444;
+    --text3: #666;
+    --border: #dee2e6;
+    --blue: #1565c0;
+    --blue-bg: #e3f2fd;
+    --blue-text: #0d47a1;
+    --red: #c62828;
+    --red-bg: #ffebee;
+    --red-text: #b71c1c;
+    --green: #2e7d32;
+    --green-bg: #e8f5e9;
+    --green-text: #1b5e20;
+    --amber: #f57f17;
+    --amber-bg: #fff8e1;
+    --amber-text: #e65100;
+    --purple: #6a1b9a;
+    --purple-bg: #f3e5f5;
+    --purple-text: #4a148c;
+    --teal: #00695c;
+    --teal-bg: #e0f2f1;
+    --teal-text: #004d40;
+    --accent: #1565c0;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --radius: 10px;
+  }
+
+  [data-theme="dark"] {
+    --bg: #0f0f1a;
+    --bg2: #1a1a2e;
+    --bg3: #16213e;
+    --text: #e8e8f0;
+    --text2: #b0b0c0;
+    --text3: #808090;
+    --border: #2a2a3e;
+    --blue: #64b5f6;
+    --blue-bg: #0d2137;
+    --blue-text: #90caf9;
+    --red: #ef9a9a;
+    --red-bg: #2c1010;
+    --red-text: #ffcdd2;
+    --green: #a5d6a7;
+    --green-bg: #0a1f0a;
+    --green-text: #c8e6c9;
+    --amber: #ffcc02;
+    --amber-bg: #1f1500;
+    --amber-text: #ffe082;
+    --purple: #ce93d8;
+    --purple-bg: #1a0a2e;
+    --purple-text: #e1bee7;
+    --teal: #80cbc4;
+    --teal-bg: #0a1f1e;
+    --teal-text: #b2dfdb;
+    --accent: #64b5f6;
+    --shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 15px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    color: #fff;
+    padding: 2rem 1.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  [data-theme="dark"] .site-header {
+    background: linear-gradient(135deg, #0d2137 0%, #0a1520 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+  .header-title h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.3px; }
+  .header-title p { font-size: 0.85rem; opacity: 0.85; margin-top: 4px; }
+  .header-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.35);
+    letter-spacing: 0.3px;
+  }
+  .badge.red { background: rgba(220,50,50,0.8); border-color: rgba(255,100,100,0.5); }
+  .badge.green { background: rgba(40,150,80,0.8); border-color: rgba(80,200,100,0.5); }
+
+  #theme-toggle {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  #theme-toggle:hover { background: rgba(255,255,255,0.25); }
+
+  /* ─── LAYOUT ─── */
+  .wrapper { display: flex; gap: 0; min-height: 100vh; }
+
+  /* ─── SIDEBAR ─── */
+  .sidebar {
+    width: 260px;
+    min-width: 220px;
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 106px;
+    height: calc(100vh - 106px);
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+  .sidebar-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    padding: 0 1rem 0.5rem;
+  }
+  .sidebar nav ul { list-style: none; }
+  .sidebar nav ul li a {
+    display: block;
+    padding: 7px 1rem 7px 1.2rem;
+    font-size: 0.82rem;
+    color: var(--text2);
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+  }
+  .sidebar nav ul li a:hover,
+  .sidebar nav ul li a.active {
+    background: var(--blue-bg);
+    color: var(--blue-text);
+    border-left-color: var(--blue);
+    text-decoration: none;
+  }
+  .sidebar nav ul li.section-header a {
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--text3);
+    pointer-events: none;
+    padding-top: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .sidebar .express-link a {
+    color: var(--red-text) !important;
+    font-weight: 700;
+  }
+  .sidebar .express-link a:hover {
+    background: var(--red-bg) !important;
+    border-left-color: var(--red) !important;
+  }
+
+  /* ─── MAIN CONTENT ─── */
+  .main-content {
+    flex: 1;
+    padding: 2rem 2.5rem;
+    max-width: 820px;
+  }
+
+  /* ─── SECTION HEADERS ─── */
+  .bloco-header {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--accent);
+  }
+  .bloco-header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .bloco-header p {
+    font-size: 0.85rem;
+    color: var(--text3);
+    margin-top: 4px;
+  }
+
+  /* ─── TEMA CARD ─── */
+  .tema {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .tema-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 1.25rem;
+    cursor: pointer;
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+    user-select: none;
+    gap: 10px;
+  }
+  .tema-header:hover { background: var(--blue-bg); }
+  .tema-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    flex: 1;
+  }
+  .tema-toggle {
+    font-size: 1.1rem;
+    color: var(--text3);
+    min-width: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .tema-body { padding: 1.25rem; }
+  .tema-body.collapsed { display: none; }
+
+  /* ─── BLOCOS DE CONTEÚDO ─── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .bloco {
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 12px;
+  }
+  .bloco:last-child { margin-bottom: 0; }
+  .bloco-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .bloco ul { padding-left: 18px; }
+  .bloco li { font-size: 0.88rem; margin-bottom: 5px; line-height: 1.5; }
+  .bloco p { font-size: 0.88rem; line-height: 1.6; }
+
+  .bloco-conceito { background: var(--blue-bg); border-left: 4px solid var(--blue); }
+  .bloco-conceito .bloco-label { color: var(--blue-text); }
+
+  .bloco-pegadinha { background: var(--red-bg); border-left: 4px solid var(--red); }
+  .bloco-pegadinha .bloco-label { color: var(--red-text); }
+
+  .bloco-como-cai { background: var(--green-bg); border-left: 4px solid var(--green); }
+  .bloco-como-cai .bloco-label { color: var(--green-text); }
+
+  .bloco-comparacao { background: var(--amber-bg); border-left: 4px solid var(--amber); }
+  .bloco-comparacao .bloco-label { color: var(--amber-text); }
+
+  .bloco-dica { background: var(--purple-bg); border-left: 4px solid var(--purple); }
+  .bloco-dica .bloco-label { color: var(--purple-text); }
+
+  /* ─── TABELAS ─── */
+  .tabela-wrap { overflow-x: auto; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+    margin-top: 6px;
+  }
+  th {
+    background: rgba(0,0,0,0.07);
+    color: var(--text2);
+    font-weight: 700;
+    padding: 7px 10px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+  }
+  [data-theme="dark"] th { background: rgba(255,255,255,0.06); }
+  td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(0,0,0,0.02); }
+
+  /* ─── QUESTÃO ─── */
+  .bloco-questao {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    margin-top: 12px;
+  }
+  .bloco-questao .bloco-label { color: var(--teal-text); }
+  .questao-texto {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: var(--bg2);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .btn-gabarito {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text2);
+    padding: 6px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .btn-gabarito:hover { background: var(--blue-bg); color: var(--blue-text); border-color: var(--blue); }
+  .gabarito-reveal {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  .gabarito-certo { background: var(--green-bg); color: var(--green-text); border: 1px solid #a5d6a7; }
+  .gabarito-errado { background: var(--red-bg); color: var(--red-text); border: 1px solid #ef9a9a; }
+
+  /* ─── REVISÃO EXPRESSA ─── */
+  .express-section {
+    background: var(--bg2);
+    border: 2px solid var(--red);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .express-section h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--red-text);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .perigo-list { list-style: none; }
+  .perigo-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .perigo-item:last-child { border-bottom: none; }
+  .perigo-num {
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--red-bg);
+    color: var(--red-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .perigo-text { font-size: 0.88rem; color: var(--text); line-height: 1.55; }
+  .perigo-text b { color: var(--red-text); }
+
+  /* ─── SEPARADOR ─── */
+  .section-sep {
+    height: 1px;
+    background: var(--border);
+    margin: 2.5rem 0;
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main-content { padding: 1.25rem; }
+  }
+
+  /* ─── SCROLL SUAVE ─── */
+  html { scroll-behavior: smooth; }
+
+  /* ─── UTILIDADES ─── */
+  strong { color: var(--text); }
+  code {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.83em;
+    color: var(--blue-text);
+  }
+  .nota {
+    font-size: 0.78rem;
+    color: var(--text3);
+    font-style: italic;
+    margin-top: 6px;
+  }
+
+  /* ─── AVISO TOPO ─── */
+  .aviso-prova {
+    background: linear-gradient(90deg, var(--red-bg), var(--amber-bg));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--red-text);
+  }
+
+  /* Scrollbar custom */
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-track { background: transparent; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-top">
+    <div class="header-title">
+      <h1>🎯 Revisão de Véspera — ANSA 2026 · Ênfase 13</h1>
+      <p>Administração e Controle · Nível Médio · Banca CEBRASPE · Prova: 26/04/2026</p>
+    </div>
+    <button id="theme-toggle" onclick="toggleTheme()">🌙 Modo Escuro</button>
+  </div>
+  <div class="header-badges">
+    <span class="badge">📋 P1: 30 questões básicas</span>
+    <span class="badge">📚 P2: 70 questões específicas</span>
+    <span class="badge red">⚠️ Penalização por erro</span>
+    <span class="badge green">⏱️ 4 horas · Turno tarde</span>
+    <span class="badge">🏆 Mínimo: 6 (P1) + 21 (P2) + 30 (total)</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LAYOUT
+═══════════════════════════════════════════════════════════ -->
+<div class="wrapper">
+
+  <!-- SIDEBAR / ÍNDICE -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Índice Navegável</div>
+    <nav>
+      <ul>
+        <li class="section-header"><a href="#">⚡ Revisão Expressa</a></li>
+        <li class="express-link"><a href="#express">🔥 10 Pontos Perigosos</a></li>
+
+        <li class="section-header"><a href="#">Bloco I — Processos</a></li>
+        <li><a href="#t1">1. Recrutamento e Seleção</a></li>
+        <li><a href="#t2">2. Gestão de Competências</a></li>
+        <li><a href="#t3">3. Manutenção Patrimonial</a></li>
+        <li><a href="#t4">4. Curva ABC e Estoques</a></li>
+        <li><a href="#t5">5. Decreto 2.745/98</a></li>
+        <li><a href="#t6">6. Redação Oficial</a></li>
+        <li><a href="#t7">7. Transporte e Armazenagem</a></li>
+
+        <li class="section-header"><a href="#">Bloco II — Mat. Financeira</a></li>
+        <li><a href="#t8">8. Juros Simples vs. Compostos</a></li>
+        <li><a href="#t9">9. Descontos</a></li>
+        <li><a href="#t10">10. Porcentagem e Contabilidade</a></li>
+
+        <li class="section-header"><a href="#">Bloco III — Informática</a></li>
+        <li><a href="#t11">11. Internet e Intranet</a></li>
+        <li><a href="#t12">12. Aplicativos Comerciais</a></li>
+
+        <li class="section-header"><a href="#">Conhecimentos Básicos</a></li>
+        <li><a href="#t13">13. Língua Portuguesa</a></li>
+        <li><a href="#t14">14. Raciocínio Lógico</a></li>
+        <li><a href="#t15">15. LGPD e Acesso à Info</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- AVISO -->
+    <div class="aviso-prova">
+      🚨 &nbsp;A prova é amanhã! Foque nos pontos marcados como pegadinha — é onde o CEBRASPE elimina candidatos.
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         REVISÃO EXPRESSA
+    ═══════════════════════════════════════════════════════ -->
+    <section id="express">
+      <div class="express-section">
+        <h2>🔥 Revisão Expressa — 10 Pontos Mais Perigosos da Prova</h2>
+        <ul class="perigo-list">
+          <li class="perigo-item">
+            <div class="perigo-num">1</div>
+            <div class="perigo-text"><b>Curva ABC invertida:</b> Itens A = POUCOS em quantidade / MUITO valor (≈80%). A banca SEMPRE afirma o contrário. Não caia nessa.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">2</div>
+            <div class="perigo-text"><b>Manutenção preditiva ≠ preventiva:</b> Preditiva usa monitoramento contínuo e sensores para PREVER a falha. Preventiva usa calendário fixo. A banca troca as definições.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">3</div>
+            <div class="perigo-text"><b>Decreto 2.745/98:</b> É o regulamento licitatório simplificado que rege a Petrobras e a ANSA — NÃO é a Lei 8.666/93 nem a 14.133/21. Questão certíssima de cair.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">4</div>
+            <div class="perigo-text"><b>Porcentagem sequencial:</b> Aumento de X% seguido de redução de X% NÃO retorna ao valor original. Ex.: +20% depois –20% = resultado final de –4%. Nunca se cancelam.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">5</div>
+            <div class="perigo-text"><b>Desconto comercial vs. racional:</b> Comercial = incide sobre o valor NOMINAL (por fora). Racional/bancário = incide sobre o valor ATUAL/presente (por dentro). A banca inverte os conceitos.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">6</div>
+            <div class="perigo-text"><b>Juros simples = crescimento LINEAR:</b> O montante cresce em linha reta. Apenas os juros compostos crescem exponencialmente. A banca diz que simples é exponencial → ERRADO.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">7</div>
+            <div class="perigo-text"><b>CHA — Atitude ≠ Conhecimento:</b> Atitude = querer fazer (disposição/comportamento); Conhecimento = saber (teoria); Habilidade = saber fazer (prática). A banca sempre mistura os componentes.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">8</div>
+            <div class="perigo-text"><b>Negação lógica de "Todos":</b> A negação de "Todos A são B" é "Algum A NÃO é B" — nunca "Nenhum A é B". Questão clássica do CEBRASPE em TODOS os concursos.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">9</div>
+            <div class="perigo-text"><b>PROCV vs. PROCH no Excel:</b> PROCV = busca em COLUNA (vertical); PROCH = busca em LINHA (horizontal). A banca descreve um como se fosse o outro. Memorize: V = vertical, H = horizontal.</div>
+          </li>
+          <li class="perigo-item">
+            <div class="perigo-num">10</div>
+            <div class="perigo-text"><b>Intranet ≠ Internet:</b> Intranet é rede PRIVADA e RESTRITA de uma organização. "Qualquer usuário da internet pode acessar a intranet" → ERRADO. Palavras absolutas = armadilha garantida do CEBRASPE.</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="section-sep"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO I
+    ═══════════════════════════════════════════════════════ -->
+    <div class="bloco-header">
+      <h2>📋 Bloco I — Processos Administrativos e Legislação</h2>
+      <p>Gestão de pessoas, patrimônio, estoques, compras, redação oficial e transporte</p>
+    </div>
+
+    <!-- TEMA 1 -->
+    <div class="tema" id="t1">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>1 · Recrutamento e Seleção · Treinamento e Desenvolvimento</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Recrutamento:</strong> atrai e identifica candidatos (interno ou externo)</li>
+              <li><strong>Seleção:</strong> escolhe o melhor candidato entre os atraídos</li>
+              <li><strong>Treinamento:</strong> curto prazo, foco em tarefa/cargo atual</li>
+              <li><strong>Desenvolvimento:</strong> longo prazo, foco em crescimento/carreira</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Recrutamento seleciona o melhor candidato"</strong> → ERRADO: quem seleciona é a Seleção</li>
+              <li>Recrutamento interno NÃO elimina candidatos externos automaticamente</li>
+              <li>Treinamento ≠ desenvolvimento: a banca costuma inverter os conceitos</li>
+              <li>Educação corporativa ≠ treinamento pontual</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-comparacao">
+            <div class="bloco-label">🔁 Comparação importante</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Recrutamento</th><th>Seleção</th></tr>
+                <tr><td>Atrai candidatos</td><td>Escolhe o melhor</td></tr>
+                <tr><td>Processo de busca</td><td>Processo decisório</td></tr>
+                <tr><td>Divulga a vaga</td><td>Aplica testes/entrevistas</td></tr>
+                <tr><td>Amplia o leque</td><td>Afunila para o escolhido</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="bloco bloco-comparacao">
+            <div class="bloco-label">🔁 Recrutamento Interno vs. Externo</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Interno</th><th>Externo</th></tr>
+                <tr><td>Mais rápido</td><td>Traz sangue novo</td></tr>
+                <tr><td>Menor custo</td><td>Custo mais alto</td></tr>
+                <tr><td>Motiva colaboradores</td><td>Renovação cultural</td></tr>
+                <tr><td>Pode gerar conflitos</td><td>Processo mais longo</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-como-cai">
+            <div class="bloco-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Afirmação trocando funções de recrutamento e seleção</li>
+              <li>Confusão entre treinamento (operacional) e desenvolvimento (estratégico)</li>
+              <li>Perguntas sobre vantagens do recrutamento interno vs. externo</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-dica">
+            <div class="bloco-label">🧠 Dica de memorização</div>
+            <p><strong>R</strong>ecrutamento = <strong>R</strong>ede (joga a rede para pescar candidatos)</p>
+            <p style="margin-top:6px"><strong>S</strong>eleção = <strong>S</strong>eparar (separa o melhor peixe)</p>
+            <p style="margin-top:6px"><strong>T</strong>reinamento = <strong>T</strong>arefa (hoje); <strong>D</strong>esenvolvimento = <strong>D</strong>epois (futuro)</p>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">O recrutamento interno tem como vantagem a redução de custos e o aproveitamento de talentos já existentes na organização, sendo considerado, em regra, mais rápido que o recrutamento externo.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'certo')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-certo">✅ CERTO — O recrutamento interno é mais ágil e econômico; aproveita colaboradores que já conhecem a cultura organizacional e os processos da empresa.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 2 -->
+    <div class="tema" id="t2">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>2 · Gestão de Competências (CHA) e Gerenciamento de Desempenho</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>C — Conhecimento:</strong> saber (teoria, informação)</li>
+              <li><strong>H — Habilidade:</strong> saber fazer (prática, técnica)</li>
+              <li><strong>A — Atitude:</strong> querer fazer (comportamento, disposição)</li>
+              <li><strong>Avaliação 360°:</strong> avaliação por todos os níveis — pares, líderes, subordinados e autoavaliação</li>
+              <li><strong>Meritocracia:</strong> progressão baseada em resultados e competências</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Atitude = conjunto de conhecimentos técnicos"</strong> → ERRADO: Atitude = disposição/querer fazer</li>
+              <li><strong>"Avaliação 360° é feita somente pelo chefe"</strong> → ERRADO: envolve todos ao redor</li>
+              <li>Competência ≠ apenas habilidade: é o conjunto CHA completo</li>
+              <li>Gerenciamento de desempenho ≠ avaliação de desempenho (gerenciamento é processo contínuo)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Comparação: Tipos de Avaliação de Desempenho</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Tipo</th><th>Quem avalia</th><th>Característica</th></tr>
+              <tr><td>Tradicional (chefe)</td><td>Superior direto</td><td>Visão única, tendenciosa</td></tr>
+              <tr><td>Autoavaliação</td><td>O próprio colaborador</td><td>Reflexão, pode ser superestimada</td></tr>
+              <tr><td>180°</td><td>Chefe + auto</td><td>Complementar</td></tr>
+              <tr><td>360°</td><td>Todos ao redor</td><td>Visão completa e isônoma</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">Na gestão por competências, o componente "atitude" refere-se ao conjunto de conhecimentos técnicos que o colaborador domina para executar suas funções de forma adequada.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — "Atitude" é o componente que representa o QUERER FAZER — disposição, iniciativa e comportamento. "Conhecimento" é o SABER (teoria). A questão trocou deliberadamente os conceitos do CHA.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 3 -->
+    <div class="tema" id="t3">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>3 · Administração Patrimonial — Manutenção Preventiva, Corretiva e Preditiva</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Preventiva:</strong> realizada antes da falha, em intervalos programados por calendário</li>
+              <li><strong>Corretiva:</strong> realizada após a ocorrência da falha — pode ser planejada (prevista) ou não planejada (emergencial)</li>
+              <li><strong>Preditiva:</strong> monitoramento contínuo via sensores/dados para prever e evitar falha antes que ocorra</li>
+              <li><strong>Detectiva:</strong> testa sistemas de proteção para verificar se funcionam (ex.: alarmes)</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>Preditiva ≠ Preventiva:</strong> preditiva usa dados em tempo real; preventiva usa agenda fixa</li>
+              <li><strong>"Manutenção corretiva é sempre não planejada"</strong> → ERRADO: existe a corretiva planejada</li>
+              <li><strong>"Preventiva é a mais cara de todas"</strong> → Depende; preditiva pode exigir investimentos maiores inicialmente</li>
+              <li>Ambas preditiva e preventiva ocorrem ANTES da falha — a diferença é o gatilho</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Comparação: Tipos de Manutenção</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Tipo</th><th>Quando ocorre</th><th>Gatilho</th><th>Objetivo</th></tr>
+              <tr><td>Preventiva</td><td>Antes da falha</td><td>Calendário fixo</td><td>Evitar falha por agenda</td></tr>
+              <tr><td>Corretiva não planejada</td><td>Após a falha</td><td>Quebra inesperada</td><td>Restaurar funcionamento</td></tr>
+              <tr><td>Corretiva planejada</td><td>Após detecção</td><td>Falha prevista/tolerada</td><td>Reparar em momento oportuno</td></tr>
+              <tr><td>Preditiva</td><td>Antes da falha</td><td>Dados/sensores</td><td>Prever e evitar a falha</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-como-cai">
+            <div class="bloco-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Descrição de uma manutenção e pedido para identificar o tipo</li>
+              <li>Afirmação que confunde os gatilhos de acionamento</li>
+              <li>Questão sobre qual tipo é mais adequado para equipamentos críticos (preditiva)</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-dica">
+            <div class="bloco-label">🧠 Dica de memorização</div>
+            <p><strong>Pre</strong>ventiva = <strong>Pre</strong>venir pelo calendário</p>
+            <p style="margin-top:6px"><strong>Cor</strong>retiva = equip. <strong>Cor</strong>reu mal (quebrou)</p>
+            <p style="margin-top:6px"><strong>Pre</strong>ditiva = <strong>Pre</strong>diz via dados (sensor fala antes)</p>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">A manutenção preditiva difere da preventiva por ser realizada com base em monitoramento contínuo do estado dos equipamentos, permitindo intervenções apenas quando os parâmetros monitorados indicam iminência de falha.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'certo')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-certo">✅ CERTO — Esta é a definição precisa de manutenção preditiva: age com base em dados de monitoramento em tempo real, e não em calendário fixo como a preventiva.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 4 -->
+    <div class="tema" id="t4">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>4 · Gestão e Controle de Estoques — Curva ABC, JIT e Kanban</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Curva ABC:</strong> classifica itens por importância financeira</li>
+              <li><strong>Classe A:</strong> ≈ 20% dos itens → ≈ 80% do valor total (controle rigoroso)</li>
+              <li><strong>Classe B:</strong> ≈ 30% dos itens → ≈ 15% do valor (intermediário)</li>
+              <li><strong>Classe C:</strong> ≈ 50% dos itens → ≈ 5% do valor (controle simples)</li>
+              <li><strong>JIT (Just in Time):</strong> estoque mínimo, produção sob demanda, eliminação de desperdício</li>
+              <li><strong>Kanban:</strong> sinalização visual (cartões) para controlar fluxo de produção e reposição</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Itens A = maioria em quantidade E maior valor"</strong> → ERRADO: A tem POUCOS itens e ALTO valor</li>
+              <li><strong>"JIT elimina totalmente o estoque"</strong> → Na prática, minimiza ao máximo — cuidado com o "totalmente"</li>
+              <li><strong>"Kanban é um sistema de informação (TI)"</strong> → ERRADO: é ferramenta visual LEAN (cartões físicos ou digitais)</li>
+              <li>Inventário rotativo ≠ inventário geral (rotativo é contínuo/amostral)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Curva ABC — Resumo</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Classe</th><th>% de itens</th><th>% do valor</th><th>Controle</th></tr>
+              <tr><td><strong>A</strong></td><td>≈ 20%</td><td>≈ 80%</td><td>Máximo rigor</td></tr>
+              <tr><td><strong>B</strong></td><td>≈ 30%</td><td>≈ 15%</td><td>Médio</td></tr>
+              <tr><td><strong>C</strong></td><td>≈ 50%</td><td>≈ 5%</td><td>Simplificado</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-como-cai">
+            <div class="bloco-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Tabela com % de itens e valor — identificar a classe correta</li>
+              <li>Afirmações sobre JIT com palavras absolutas ("nunca", "sempre", "totalmente")</li>
+              <li>Afirmar que Kanban é sistema de TI → ERRADO</li>
+              <li>Comparação entre políticas de estoque zero e estoque de segurança</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-dica">
+            <div class="bloco-label">🧠 Dica de memorização</div>
+            <p><strong>A</strong>BC = <strong>A</strong>lta importância tem POUCOS itens</p>
+            <p style="margin-top:6px">Lembre: <em>"Os poucos vitais (A) vs. os muitos triviais (C)"</em> — princípio de Pareto</p>
+            <p style="margin-top:6px">JIT = "Just <strong>I</strong>n <strong>T</strong>ime" = na hora certa, sem sobra</p>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">Na classificação ABC de estoques, os itens da classe A representam a maior parte em quantidade de itens estocados e correspondem ao maior valor financeiro do estoque.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — Os itens A representam POUCOS itens (≈20% em quantidade) mas ALTO valor (≈80% do valor financeiro). A banca inverteu propositalmente a lógica: A tem poucos itens de grande valor, não muitos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 5 -->
+    <div class="tema" id="t5">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>5 · Modalidades de Compras e Decreto nº 2.745/1998</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li>O <strong>Decreto 2.745/98</strong> aprova o Regulamento do Procedimento Licitatório Simplificado da Petrobras</li>
+              <li>Aplica-se especificamente a empresas estatais que exploram atividade econômica (Petrobras e subsidiárias, incluindo a ANSA)</li>
+              <li>Simplifica os processos de contratação sem afastar os princípios licitatórios</li>
+              <li><strong>Princípios mantidos:</strong> legalidade, moralidade, igualdade, publicidade, eficiência</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Petrobras/ANSA seguem a Lei 8.666/93 ou a 14.133/21"</strong> → ERRADO: seguem o Decreto 2.745/98</li>
+              <li>O Decreto NÃO afasta os princípios da legalidade e moralidade</li>
+              <li>Compra emergencial ≠ dispensa de licitação irrestrita — há limites e critérios</li>
+              <li>Modalidades: concorrência, tomada de preços, convite, leilão, concurso — cada uma tem faixa de valores</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Modalidades de Compras Gerais</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Modalidade</th><th>Característica</th></tr>
+              <tr><td>Compra direta</td><td>Valores baixos, sem processo formal</td></tr>
+              <tr><td>Tomada de preços</td><td>Fornecedores cadastrados</td></tr>
+              <tr><td>Concorrência</td><td>Ampla participação, altos valores</td></tr>
+              <tr><td>Leilão</td><td>Venda de bens, maior lance</td></tr>
+              <tr><td>Pregão</td><td>Bens e serviços comuns, via disputa</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">A ANSA, por ser subsidiária da Petrobras e exploradora de atividade econômica, está obrigada a seguir integralmente as normas da Lei nº 14.133/2021 em todos os seus processos de contratação.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — A ANSA segue o Decreto nº 2.745/1998, que aprova o Regulamento do Procedimento Licitatório Simplificado da Petrobras. A Lei nº 14.133/2021 (Nova Lei de Licitações) não se aplica diretamente à ANSA.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 6 -->
+    <div class="tema" id="t6">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>6 · Redação Oficial — Memorando, Comunicação Interna e Requerimento</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Memorando:</strong> comunicação interna entre unidades da MESMA organização; linguagem objetiva e direta</li>
+              <li><strong>Ofício:</strong> comunicação entre órgãos distintos ou entre órgão e particular</li>
+              <li><strong>Requerimento:</strong> pedido formal de um cidadão a uma autoridade pública</li>
+              <li><strong>Circular:</strong> mesma mensagem enviada a múltiplos destinatários</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Ofício é usado para comunicação interna"</strong> → ERRADO: comunicação interna é o memorando</li>
+              <li>Memorando não usa vocativo formal como "Excelentíssimo Senhor"</li>
+              <li><strong>Pronomes de tratamento:</strong> "Vossa Excelência" = cargos eletivos, ministros e magistrados; "Vossa Senhoria" = demais autoridades</li>
+              <li>"Vossa Excelência" não se usa para funcionários comuns</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Comparação: Documentos Oficiais</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Documento</th><th>Emissor</th><th>Destinatário</th><th>Uso típico</th></tr>
+              <tr><td>Memorando</td><td>Unidade interna</td><td>Outra unidade interna</td><td>Comunicação interna</td></tr>
+              <tr><td>Ofício</td><td>Órgão/autoridade</td><td>Externo ou outro órgão</td><td>Comunicação oficial externa</td></tr>
+              <tr><td>Requerimento</td><td>Cidadão</td><td>Autoridade pública</td><td>Solicitações formais</td></tr>
+              <tr><td>Circular</td><td>Chefia</td><td>Múltiplos internos</td><td>Mesma info para todos</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-como-cai">
+            <div class="bloco-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Identificar o documento correto dado um cenário de comunicação</li>
+              <li>Questões sobre pronomes de tratamento adequados</li>
+              <li>Afirmações trocando ofício e memorando</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-dica">
+            <div class="bloco-label">🧠 Dica de memorização</div>
+            <p><strong>Me</strong>morando = <strong>Me</strong>smo lugar (comunicação interna)</p>
+            <p style="margin-top:6px"><strong>O</strong>fício = para <strong>O</strong>utros (externo)</p>
+            <p style="margin-top:6px"><strong>R</strong>equerimento = <strong>R</strong>equer do cidadão para o Estado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 7 -->
+    <div class="tema" id="t7">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>7 · Modalidades de Transporte e Armazenagem/Almoxarifado</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="bloco bloco-conceito">
+          <div class="bloco-label">⚖️ Conceito-chave</div>
+          <ul>
+            <li><strong>Rodoviário:</strong> modal mais utilizado no Brasil; muito flexível, acessa locais sem ferrovia</li>
+            <li><strong>Ferroviário:</strong> ideal para grandes volumes e longas distâncias; custo menor que rodoviário em escala</li>
+            <li><strong>Aéreo:</strong> mais rápido; muito caro; ideal para cargas urgentes e de alto valor</li>
+            <li><strong>Aquaviário:</strong> marítimo + fluvial; maior capacidade de volume; mais lento</li>
+            <li><strong>Dutoviário:</strong> pipelines; exclusivo para líquidos e gases; menor custo operacional por unidade em longas distâncias</li>
+            <li><strong>Almoxarifado:</strong> local de armazenagem de materiais em uso corrente/consumo regular</li>
+          </ul>
+        </div>
+        <div class="bloco bloco-pegadinha">
+          <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+          <ul>
+            <li><strong>"Modal ferroviário é o mais utilizado no Brasil"</strong> → ERRADO: é o RODOVIÁRIO (matriz brasileira de transporte é predominantemente rodoviária)</li>
+            <li>Almoxarifado ≠ depósito: almoxarifado guarda materiais de uso corrente; depósito é para bens permanentes ou em trânsito</li>
+            <li>Modal dutoviário é o de MENOR custo operacional para líquidos/gases em longas distâncias, mas tem custo de implantação elevado</li>
+            <li>Intermodalidade = uso integrado de dois ou mais modais com documento único de transporte</li>
+          </ul>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Comparação: Modais de Transporte</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Modal</th><th>Vantagem</th><th>Desvantagem</th><th>Melhor para</th></tr>
+              <tr><td>Rodoviário</td><td>Flexibilidade, capilaridade</td><td>Custo alto em longas distâncias</td><td>Entregas door-to-door</td></tr>
+              <tr><td>Ferroviário</td><td>Baixo custo, grande volume</td><td>Pouca flexibilidade de rota</td><td>Grãos, minérios, derivados</td></tr>
+              <tr><td>Aéreo</td><td>Velocidade</td><td>Custo muito elevado</td><td>Cargas urgentes/perecíveis</td></tr>
+              <tr><td>Aquaviário</td><td>Grande volume, baixo custo</td><td>Lentidão, infraestrutura limitada</td><td>Exportação, granéis</td></tr>
+              <tr><td>Dutoviário</td><td>Baixo custo operacional</td><td>Só líquidos/gases, imóvel</td><td>Petróleo, gás, etanol</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sep"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO II
+    ═══════════════════════════════════════════════════════ -->
+    <div class="bloco-header">
+      <h2>🔢 Bloco II — Noções de Matemática Financeira e Contabilidade</h2>
+      <p>Juros simples e compostos, descontos, porcentagem, fluxo de caixa e registros contábeis</p>
+    </div>
+
+    <!-- TEMA 8 -->
+    <div class="tema" id="t8">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>8 · Juros Simples vs. Juros Compostos</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Juros Simples:</strong> J = C × i × t</li>
+              <li>Os juros incidem SEMPRE sobre o capital inicial</li>
+              <li>Crescimento LINEAR (progressão aritmética)</li>
+              <li><strong>Juros Compostos:</strong> M = C × (1 + i)ⁿ</li>
+              <li>Juros incidem sobre o montante atualizado (juros sobre juros)</li>
+              <li>Crescimento EXPONENCIAL (progressão geométrica)</li>
+              <li><strong>Montante:</strong> M = C + J (capital + juros)</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Juros simples crescem exponencialmente"</strong> → ERRADO: crescem linearmente</li>
+              <li>No período 1 (t=1): juros simples = juros compostos (diferença aparece a partir de t=2)</li>
+              <li><strong>"Quanto maior o prazo, maior a diferença entre os regimes"</strong> → CERTO: divergência aumenta com o tempo</li>
+              <li>Taxa nominal ≠ taxa efetiva quando há capitalização mais frequente que o período da taxa</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Comparação: Regimes de Juros</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Característica</th><th>Juros Simples</th><th>Juros Compostos</th></tr>
+              <tr><td>Base de cálculo</td><td>Capital inicial (C)</td><td>Montante atualizado</td></tr>
+              <tr><td>Tipo de crescimento</td><td>Linear (aritmético)</td><td>Exponencial (geométrico)</td></tr>
+              <tr><td>Fórmula dos juros</td><td>J = C × i × t</td><td>J = C(1+i)ⁿ − C</td></tr>
+              <tr><td>Fórmula do montante</td><td>M = C(1 + it)</td><td>M = C(1+i)ⁿ</td></tr>
+              <tr><td>Uso comum</td><td>Curto prazo, cheque</td><td>Investimentos, financiamentos</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-como-cai">
+            <div class="bloco-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Afirmação sobre crescimento linear vs. exponencial</li>
+              <li>Cálculo de montante com dados fornecidos</li>
+              <li>Comparação entre os regimes num mesmo cenário</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-dica">
+            <div class="bloco-label">🧠 Dica de memorização</div>
+            <p><strong>S</strong>imples = <strong>S</strong>empre o mesmo capital (linear)</p>
+            <p style="margin-top:6px"><strong>C</strong>omposto = <strong>C</strong>resce em cima de crescimento</p>
+            <p style="margin-top:6px">Imagine uma escada: simples = degraus iguais; compostos = cada degrau maior que o anterior</p>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">Em regime de juros simples, o montante cresce de forma exponencial ao longo do tempo, pois os juros incidem sobre o montante acumulado em cada período, e não apenas sobre o capital inicial.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — Em juros SIMPLES, o crescimento é LINEAR. Os juros incidem SEMPRE sobre o capital inicial, e não sobre o montante acumulado. O crescimento exponencial é característico dos juros COMPOSTOS.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 9 -->
+    <div class="tema" id="t9">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>9 · Descontos — Comercial (por fora) vs. Racional/Bancário (por dentro)</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Desconto Comercial (por fora):</strong> D = N × d × t</li>
+              <li>Incide sobre o Valor NOMINAL (N) do título</li>
+              <li><strong>Desconto Racional/Bancário (por dentro):</strong> incide sobre o Valor ATUAL (A)</li>
+              <li><strong>Valor Atual:</strong> A = N – D (o que o portador recebe ao descontar antes do vencimento)</li>
+              <li>Para o MESMO prazo e taxa: Desconto Comercial &gt; Desconto Racional</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Desconto comercial é calculado sobre o valor atual"</strong> → ERRADO: é sobre o NOMINAL</li>
+              <li>O desconto "por fora" é o comercial — referência ao valor exterior (face do título)</li>
+              <li>O desconto "por dentro" é o racional — referência ao valor interno (presente)</li>
+              <li>Taxa de desconto (d) ≠ taxa de juros (i): têm bases de cálculo diferentes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Comparação: Tipos de Desconto</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Tipo</th><th>Nome popular</th><th>Base de cálculo</th><th>Resultado (mesmo prazo/taxa)</th></tr>
+              <tr><td>Desconto Comercial</td><td>Por fora</td><td>Valor Nominal (N)</td><td>Maior desconto</td></tr>
+              <tr><td>Desconto Racional</td><td>Por dentro</td><td>Valor Atual (A)</td><td>Menor desconto</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">No desconto comercial simples, o valor do desconto é calculado com base no valor atual do título, razão pela qual é denominado desconto "por dentro".</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — O desconto COMERCIAL é calculado sobre o valor NOMINAL (por isso é chamado "por fora" — a face do título). O desconto "por dentro" é o RACIONAL/BANCÁRIO, que incide sobre o valor atual.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 10 -->
+    <div class="tema" id="t10">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>10 · Porcentagem, Fluxo de Caixa e Registros Contábeis</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Porcentagem:</strong> razão com denominador 100; acréscimos/decréscimos sequenciais são multiplicativos, não aditivos</li>
+              <li><strong>Fluxo de Caixa:</strong> registro de entradas e saídas de caixa; saldo = entradas – saídas</li>
+              <li><strong>Regime de Caixa:</strong> registra quando PAGA ou RECEBE (efetivação financeira)</li>
+              <li><strong>Regime de Competência:</strong> registra quando o fato OCORRE (independente de pagamento)</li>
+              <li><strong>Débito/Crédito contábil:</strong> depende do grupo — ativo: débito aumenta; passivo: crédito aumenta</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Aumento de X% + redução de X% = original"</strong> → ERRADO: resultado sempre menor (ex.: +20%–20% = –4%)</li>
+              <li>Regime de competência ≠ regime de caixa: a banca sistematicamente troca as definições</li>
+              <li><strong>"Débito sempre diminui"</strong> → ERRADO: débito AUMENTA o ativo e as despesas; crédito AUMENTA o passivo e as receitas</li>
+              <li>Contabilidade gerencial ≠ contabilidade financeira (gerencial é para decisão interna)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Regime de Caixa vs. Regime de Competência</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Regime</th><th>Quando registra</th><th>Exemplo</th></tr>
+              <tr><td>Caixa</td><td>No pagamento/recebimento</td><td>Registra a compra quando paga em fevereiro</td></tr>
+              <tr><td>Competência</td><td>Quando o fato ocorre</td><td>Registra a compra de jan. em janeiro, mesmo pagando em fev.</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">Um produto com preço inicial de R$ 100,00 sofreu reajuste de 20% e, posteriormente, redução de 20% sobre o novo valor. Ao final das duas operações, o preço retornou ao valor original de R$ 100,00.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — Após +20%: R$ 100,00 × 1,20 = R$ 120,00. Após –20% sobre R$ 120,00: R$ 120,00 × 0,80 = R$ 96,00. O resultado final é R$ 96,00, não R$ 100,00. Acréscimos e deduções percentuais sequenciais NÃO se cancelam mutuamente.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sep"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BLOCO III
+    ═══════════════════════════════════════════════════════ -->
+    <div class="bloco-header">
+      <h2>💻 Bloco III — Noções de Informática</h2>
+      <p>Internet, intranet, aplicativos de edição, planilhas, e-mail e apresentações</p>
+    </div>
+
+    <!-- TEMA 11 -->
+    <div class="tema" id="t11">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>11 · Internet, Intranet, Extranet e Navegadores</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Internet:</strong> rede mundial PÚBLICA de computadores baseada no protocolo TCP/IP</li>
+              <li><strong>Intranet:</strong> rede PRIVADA corporativa que usa tecnologia da internet; acesso restrito aos colaboradores</li>
+              <li><strong>Extranet:</strong> extensão controlada da intranet para parceiros/fornecedores externos autorizados</li>
+              <li><strong>HTTP:</strong> protocolo de transferência; <strong>HTTPS:</strong> versão segura com criptografia SSL/TLS</li>
+              <li><strong>Navegadores:</strong> Chrome, Firefox, Edge, Safari — software para acessar a web</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>"Intranet é acessível a qualquer usuário da internet"</strong> → ERRADO: é privada e restrita</li>
+              <li><strong>"Extranet = internet"</strong> → ERRADO: extranet é extensão controlada da intranet</li>
+              <li><strong>HTTP ≠ HTTPS:</strong> o "S" indica criptografia; dados são protegidos no HTTPS</li>
+              <li><strong>"Navegador armazena permanentemente senhas"</strong> → cuidado: senhas no navegador têm riscos de segurança</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Comparação: Tipos de Rede</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Rede</th><th>Acesso</th><th>Quem usa</th><th>Característica</th></tr>
+              <tr><td>Internet</td><td>Público e mundial</td><td>Qualquer pessoa</td><td>Rede das redes</td></tr>
+              <tr><td>Intranet</td><td>Privado/interno</td><td>Colaboradores</td><td>Tecnologia web corporativa</td></tr>
+              <tr><td>Extranet</td><td>Externo controlado</td><td>Parceiros autorizados</td><td>Extensão da intranet</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-como-cai">
+            <div class="bloco-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Diferenciação entre internet, intranet e extranet</li>
+              <li>Questões sobre segurança: HTTP vs. HTTPS</li>
+              <li>Funcionalidades dos navegadores (cookies, cache, histórico)</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-dica">
+            <div class="bloco-label">🧠 Dica de memorização</div>
+            <p><strong>Intra</strong> = dentro (restrito à empresa)</p>
+            <p style="margin-top:6px"><strong>Extra</strong> = fora, mas com controle de acesso</p>
+            <p style="margin-top:6px"><strong>Inter</strong> = entre todos (público global)</p>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">A intranet é uma rede de comunicação aberta ao público em geral que utiliza a mesma tecnologia da internet, diferindo desta apenas pelo fato de ser administrada por uma organização privada.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — A intranet é uma rede de acesso RESTRITO, utilizada internamente por colaboradores de uma organização — não é aberta ao público em geral. O acesso é controlado por autenticação e geralmente protegido por firewall.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 12 -->
+    <div class="tema" id="t12">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>12 · Aplicativos Comerciais — Word, Excel, PowerPoint, Outlook</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceito-chave</div>
+            <ul>
+              <li><strong>Word (.docx):</strong> editor de textos; estilos, tabelas, mala direta, controle de alterações</li>
+              <li><strong>Excel (.xlsx):</strong> planilhas eletrônicas; fórmulas, gráficos, tabelas dinâmicas, macros</li>
+              <li><strong>PowerPoint (.pptx):</strong> apresentações; slides, animações, transições</li>
+              <li><strong>Outlook:</strong> e-mail corporativo, calendário, agenda e gerenciamento de tarefas</li>
+              <li><strong>Toda fórmula Excel começa com =</strong> (sinal de igual obrigatório)</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>PROCV ≠ PROCH:</strong> PROCV busca em coluna (Vertical); PROCH busca em linha (Horizontal)</li>
+              <li><strong>Ctrl+Z</strong> = desfazer; <strong>Ctrl+Y</strong> = refazer (não é "desfazer o desfazer")</li>
+              <li>Extensões: <code>.docx</code> (Word); <code>.xlsx</code> (Excel); <code>.pptx</code> (PowerPoint)</li>
+              <li><strong>"Fórmula Excel começa com +"</strong> → ERRADO: começa SEMPRE com =</li>
+              <li>Planilha ≠ pasta de trabalho: a pasta contém várias planilhas (abas)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Atalhos de Teclado Essenciais (Microsoft Office)</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Atalho</th><th>Ação</th><th>Aplicativo</th></tr>
+              <tr><td><code>Ctrl+Z</code></td><td>Desfazer</td><td>Todos</td></tr>
+              <tr><td><code>Ctrl+Y</code></td><td>Refazer</td><td>Todos</td></tr>
+              <tr><td><code>Ctrl+C / Ctrl+V</code></td><td>Copiar / Colar</td><td>Todos</td></tr>
+              <tr><td><code>Ctrl+S</code></td><td>Salvar</td><td>Todos</td></tr>
+              <tr><td><code>Ctrl+Home</code></td><td>Ir para início</td><td>Word/Excel</td></tr>
+              <tr><td><code>F2</code></td><td>Editar célula</td><td>Excel</td></tr>
+              <tr><td><code>F4</code></td><td>Travar referência ($)</td><td>Excel</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">No Microsoft Excel, a função PROCV permite localizar um valor em uma linha de uma planilha e retornar um valor correspondente de outra coluna na mesma linha, sendo equivalente à função de busca horizontal.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — O PROCV (Procura Vertical) busca um valor na primeira COLUNA de um intervalo e retorna o valor de outra coluna na mesma LINHA. A função que realiza busca HORIZONTAL (em linhas) é o PROCH. A questão descreveu o PROCH e chamou de PROCV.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sep"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CONHECIMENTOS BÁSICOS
+    ═══════════════════════════════════════════════════════ -->
+    <div class="bloco-header">
+      <h2>📖 Conhecimentos Básicos — Pontos Críticos (P1)</h2>
+      <p>Língua Portuguesa, Raciocínio Lógico e Legislação específica do edital</p>
+    </div>
+
+    <!-- TEMA 13 -->
+    <div class="tema" id="t13">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>13 · Língua Portuguesa — Interpretação, Crase e Concordância</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinhas mais frequentes</div>
+            <ul>
+              <li><strong>Crase:</strong> "à" = preposição "a" + artigo "a" (feminino). NÃO há crase antes de verbo, pronomes pessoais (ele, ela, você), artigo masculino (ao)</li>
+              <li><strong>Concordância verbal:</strong> "a maioria" + verbo singular (regra geral); sujeito coletivo = verbo singular</li>
+              <li><strong>Coesão textual:</strong> "entretanto/todavia/porém/contudo" = oposição; "logo/portanto/assim" = conclusão; "porque/pois" = causa</li>
+              <li><strong>Pronome relativo "cujo":</strong> indica posse e NÃO admite artigo depois de si</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-como-cai">
+            <div class="bloco-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Interpretação: o CEBRASPE exige que a resposta esteja explícita ou claramente implícita no texto — não "subentendida" livremente</li>
+              <li>Inferências: fique atento ao que o texto PERMITE concluir vs. o que é mera suposição</li>
+              <li>Substituição de palavras: sinonímia sem alteração de sentido ou registro formal</li>
+              <li>Questões sobre conectivos e coesão referencial</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Conectivos por função</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Função</th><th>Conectivos</th></tr>
+              <tr><td>Oposição/Contraste</td><td>mas, porém, todavia, contudo, entretanto, no entanto</td></tr>
+              <tr><td>Conclusão</td><td>logo, portanto, assim, por isso, destarte, pois (posposto)</td></tr>
+              <tr><td>Causa</td><td>porque, pois, já que, visto que, uma vez que</td></tr>
+              <tr><td>Adição</td><td>e, além disso, ademais, outrossim, também</td></tr>
+              <tr><td>Concessão</td><td>embora, ainda que, mesmo que, apesar de</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco bloco-dica">
+          <div class="bloco-label">🧠 Estratégia CEBRASPE para interpretação</div>
+          <ul>
+            <li>Leia o enunciado ANTES do texto para saber o que buscar</li>
+            <li>Sublinhe palavras absolutas: "sempre", "nunca", "somente", "apenas", "exclusivamente" — sinais de alerta</li>
+            <li>A banca costuma incluir uma palavra que inverte o sentido ("não", "exceto", "salvo") — leia com atenção</li>
+            <li>Compare o item com o trecho do texto correspondente antes de julgar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 14 -->
+    <div class="tema" id="t14">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>14 · Raciocínio Lógico — Proposições, Negação e Leis de Morgan</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ Conceitos-chave</div>
+            <ul>
+              <li><strong>Condicional "Se P então Q" (P→Q):</strong> falso SOMENTE quando P é verdadeiro e Q é falso</li>
+              <li><strong>Negação de P→Q:</strong> P ∧ ¬Q (P e não-Q)</li>
+              <li><strong>Contrapositiva:</strong> ¬Q → ¬P (equivalente lógico à original)</li>
+              <li><strong>Bicondicional P↔Q:</strong> verdadeiro quando P e Q têm o mesmo valor lógico</li>
+              <li><strong>Quantificadores — negações:</strong> "Todos A são B" → "Algum A não é B"; "Nenhum A é B" → "Algum A é B"</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinha CEBRASPE</div>
+            <ul>
+              <li><strong>Negação de "Todos":</strong> é "Algum não é" — NUNCA "Nenhum é"</li>
+              <li><strong>"Se não-P então não-Q"</strong> não é a negação nem a contrapositiva correta de P→Q</li>
+              <li><strong>Lei de Morgan:</strong> ¬(P∧Q) = ¬P∨¬Q ; ¬(P∨Q) = ¬P∧¬Q (a banca aplica errado)</li>
+              <li>Condicional: "P→Q" é verdadeiro mesmo quando P é falso (qualquer que seja Q)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Tabela-Verdade do Condicional (P→Q)</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>P</th><th>Q</th><th>P→Q</th></tr>
+              <tr><td>V</td><td>V</td><td style="color:var(--green-text);font-weight:700;">V</td></tr>
+              <tr><td>V</td><td>F</td><td style="color:var(--red-text);font-weight:700;">F ← único caso falso</td></tr>
+              <tr><td>F</td><td>V</td><td style="color:var(--green-text);font-weight:700;">V</td></tr>
+              <tr><td>F</td><td>F</td><td style="color:var(--green-text);font-weight:700;">V</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Negações dos Quantificadores</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Proposição original</th><th>Negação correta</th></tr>
+              <tr><td>Todos A são B</td><td>Algum A não é B</td></tr>
+              <tr><td>Nenhum A é B</td><td>Algum A é B</td></tr>
+              <tr><td>Algum A é B</td><td>Nenhum A é B</td></tr>
+              <tr><td>Algum A não é B</td><td>Todos A são B</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">A negação lógica da proposição "Todos os funcionários da ANSA são pontuais" é equivalente a "Nenhum funcionário da ANSA é pontual".</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — A negação de "Todos A são B" é "Existe pelo menos um A que NÃO é B", ou seja, "Algum funcionário da ANSA NÃO é pontual". "Nenhum é pontual" seria uma afirmação muito mais forte — e não é a negação lógica correta.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEMA 15 -->
+    <div class="tema" id="t15">
+      <div class="tema-header" onclick="toggleTema(this)">
+        <h3>15 · LGPD (Lei 13.709/18) e Lei de Acesso à Informação (Lei 12.527/11)</h3>
+        <span class="tema-toggle">▼</span>
+      </div>
+      <div class="tema-body">
+        <div class="grid-2">
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ LGPD — Conceitos-chave</div>
+            <ul>
+              <li><strong>Dado pessoal:</strong> qualquer informação que identifique ou possa identificar a pessoa natural</li>
+              <li><strong>Dado pessoal sensível:</strong> raça/etnia, religião, opinião política, saúde, biometria, vida sexual, genética, filiação sindical</li>
+              <li><strong>Controlador:</strong> decide como e por que tratar os dados</li>
+              <li><strong>Operador:</strong> realiza o tratamento em nome do controlador</li>
+              <li><strong>Titular:</strong> pessoa natural a quem os dados pertencem</li>
+              <li><strong>ANPD:</strong> autoridade nacional de proteção de dados</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-conceito">
+            <div class="bloco-label">⚖️ LAI — Conceitos-chave</div>
+            <ul>
+              <li>Informação pública é regra; sigilo é exceção</li>
+              <li><strong>Prazo de resposta:</strong> 20 dias, prorrogáveis por mais 10 dias</li>
+              <li><strong>Classificações de sigilo:</strong> ultrassecreto (25 anos), secreto (15 anos), reservado (5 anos)</li>
+              <li><strong>Órgão regulador:</strong> CGU (Controladoria-Geral da União) no âmbito federal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinhas LGPD</div>
+            <ul>
+              <li><strong>"Dado anonimizado é dado pessoal"</strong> → ERRADO: após anonimização irreversível, não é mais dado pessoal</li>
+              <li>Controlador ≠ Operador: a banca frequentemente troca os papéis e atribuições</li>
+              <li><strong>"LGPD vale somente para empresas privadas"</strong> → ERRADO: aplica-se também ao poder público</li>
+              <li>Dado pseudonimizado ainda é dado pessoal (pode ser reidentificado)</li>
+            </ul>
+          </div>
+          <div class="bloco bloco-pegadinha">
+            <div class="bloco-label">🚨 Pegadinhas LAI</div>
+            <ul>
+              <li><strong>"Prazo de resposta é 30 dias"</strong> → ERRADO: são 20 dias + prorrogação de 10</li>
+              <li><strong>"Toda informação pública pode ser negada por interesse da administração"</strong> → ERRADO: sigilo é exceção com critérios legais</li>
+              <li>Ultrassecreto = 25 anos (NÃO é permanente — pode ser renovado uma vez)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bloco bloco-comparacao">
+          <div class="bloco-label">🔁 Classificação do Sigilo — LAI</div>
+          <div class="tabela-wrap">
+            <table>
+              <tr><th>Classificação</th><th>Prazo máximo</th><th>Renováveis</th></tr>
+              <tr><td>Reservado</td><td>5 anos</td><td>Não</td></tr>
+              <tr><td>Secreto</td><td>15 anos</td><td>Não</td></tr>
+              <tr><td>Ultrassecreto</td><td>25 anos</td><td>Sim (uma vez, por autoridade máxima)</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="bloco-questao">
+          <div class="bloco-label">✅ Questão provável</div>
+          <div class="questao-texto">De acordo com a LGPD, o dado pessoal que tenha sido submetido a processo de anonimização continua sendo considerado dado pessoal e, portanto, sujeito a todas as proteções previstas na lei.</div>
+          <button class="btn-gabarito" onclick="revelar(this, 'errado')">Ver gabarito</button>
+          <div class="gabarito-reveal gabarito-errado">❌ ERRADO — De acordo com a LGPD (art. 12), o dado anonimizado, quando se utiliza meios técnicos razoáveis e disponíveis na ocasião de seu tratamento, NÃO é considerado dado pessoal. Apenas o dado pseudonimizado continua sendo pessoal (pois pode ser reidentificado).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sep"></div>
+
+    <!-- RODAPÉ -->
+    <div style="text-align:center; padding: 2rem 0; color: var(--text3); font-size: 0.82rem;">
+      <p>📝 Revisão de Véspera — ANSA 2026 · Ênfase 13 · Administração e Controle</p>
+      <p style="margin-top:4px">Gerado com base no Edital nº 1 – ANSA, de 23 de fevereiro de 2026 · Banca CEBRASPE</p>
+      <p style="margin-top:8px; font-weight:600; color: var(--red-text);">🚀 Boa prova! Confie no que você estudou.</p>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const btn = document.getElementById('theme-toggle');
+    if (html.getAttribute('data-theme') === 'dark') {
+      html.removeAttribute('data-theme');
+      btn.textContent = '🌙 Modo Escuro';
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      btn.textContent = '☀️ Modo Claro';
+    }
+  }
+
+  function toggleTema(header) {
+    const body = header.nextElementSibling;
+    const toggle = header.querySelector('.tema-toggle');
+    if (body.classList.contains('collapsed')) {
+      body.classList.remove('collapsed');
+      toggle.textContent = '▼';
+    } else {
+      body.classList.add('collapsed');
+      toggle.textContent = '▶';
+    }
+  }
+
+  function revelar(btn, tipo) {
+    const parent = btn.closest('.bloco-questao');
+    const div = parent.querySelector('.gabarito-reveal');
+    if (div.style.display === 'block') {
+      div.style.display = 'none';
+      btn.textContent = 'Ver gabarito';
+    } else {
+      div.style.display = 'block';
+      btn.textContent = 'Ocultar gabarito';
+    }
+  }
+
+  // Highlight sidebar link on scroll
+  const sections = document.querySelectorAll('[id^="t"], #express');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      const top = s.getBoundingClientRect().top;
+      if (top <= 150) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
